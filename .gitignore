@@ -1,0 +1,23 @@
+# ================= Flutter =================
+.dart_tool/
+.packages
+.pub/
+build/
+
+# ================= Android =================
+android/.gradle/
+android/app/build/
+android/local.properties
+android/key.properties
+*.keystore
+
+# ================= iOS =================
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/ephemeral/
+ios/Flutter/Generated.xcconfig
+
+# ================= IDE =================
+.idea/
+.vscode/
+*.iml

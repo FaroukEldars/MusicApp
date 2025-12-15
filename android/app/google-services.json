@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "485856035632",
+    "project_id": "music-app-50bdd",
+    "storage_bucket": "music-app-50bdd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485856035632:android:15f27232915da82eae3ef5",
+        "android_client_info": {
+          "package_name": "com.example.musicapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBimiCAMQ0Q3KOEpYOTtPAEz-ly-cCtOY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
