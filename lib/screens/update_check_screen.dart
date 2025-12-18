@@ -95,7 +95,7 @@ class _UpdateCheckScreenState extends State<UpdateCheckScreen> {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Colors.redAccent.withOpacity(0.2),
+                    color: Colors.redAccent,
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(color: Colors.redAccent, width: 1),
                   ),
@@ -153,7 +153,6 @@ class _UpdateCheckScreenState extends State<UpdateCheckScreen> {
                           label: 'Copy Link',
                           textColor: Colors.white,
                           onPressed: () {
-                            // يمكن تضيف clipboard copy هنا
                             print("Link: $link");
                           },
                         ),

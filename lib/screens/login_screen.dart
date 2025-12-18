@@ -144,7 +144,7 @@ class _LoginScreenState extends State<LoginScreen>
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.deepPurpleAccent.withOpacity(0.5),
+                color: Colors.deepPurpleAccent,
                 blurRadius: 25,
                 spreadRadius: 3,
               )
@@ -216,7 +216,7 @@ class _LoginScreenState extends State<LoginScreen>
         color: const Color(0xFF1E1E1E),
         borderRadius: radius,
         border: Border.all(
-          color: Colors.deepPurpleAccent.withOpacity(0.3),
+          color: Colors.deepPurpleAccent,
         ),
       ),
       child: TextFormField(

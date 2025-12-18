@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen>
           ? const Center(child: CircularProgressIndicator())
           : Column(
         children: [
-          /// 🎵 SONG LIST
+          /// SONG LIST
           Expanded(
             child: RefreshIndicator(
               onRefresh: _onRefresh,
@@ -179,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen>
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: _currentIndex == index
-                            ? Colors.deepPurpleAccent.withOpacity(0.25)
+                            ? Colors.deepPurpleAccent
                             : const Color(0xFF1E1E1E),
                         borderRadius: BorderRadius.circular(14),
                       ),
@@ -249,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen>
             ),
           ),
 
-          /// 🎧 MINI PLAYER (Synced)
+          /// MINI PLAYER
           if (_currentIndex != null)
             _miniPlayer(),
         ],

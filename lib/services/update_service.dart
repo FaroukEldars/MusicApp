@@ -34,10 +34,8 @@ class UpdateService {
       List<int> c = current.split('.').map(int.parse).toList();
       List<int> l = latest.split('.').map(int.parse).toList();
 
-      // التأكد من طول النسختين متساوي
       int maxLength = c.length > l.length ? c.length : l.length;
 
-      // إضافة أصفار للنسخة الأقصر
       while (c.length < maxLength) c.add(0);
       while (l.length < maxLength) l.add(0);
 
@@ -54,7 +52,6 @@ class UpdateService {
 
   Future<bool> openDownloadLink(String url) async {
     try {
-      // تحويل رابط Google Drive للصيغة الصحيحة
       String finalUrl = url;
       if (url.contains('drive.google.com')) {
         finalUrl = _convertGoogleDriveUrl(url);
@@ -64,7 +61,6 @@ class UpdateService {
 
       final uri = Uri.parse(finalUrl);
 
-      // جرب أكتر من وضع
       if (await canLaunchUrl(uri)) {
         bool launched = await launchUrl(
           uri,
@@ -77,7 +73,6 @@ class UpdateService {
         }
       }
 
-      // لو الطريقة الأولى فشلت، جرب platformDefault
       print("Trying platformDefault mode...");
       bool launched = await launchUrl(
         uri,
@@ -97,20 +92,16 @@ class UpdateService {
     }
   }
 
-  /// تحويل رابط Google Drive للصيغة المناسبة للتحميل المباشر
   String _convertGoogleDriveUrl(String url) {
-    // لو الرابط بالفعل بصيغة export=download
     if (url.contains('export=download')) {
       return url;
     }
 
-    // استخراج الـ file ID من أي نوع رابط Google Drive
     RegExp regExp = RegExp(r'[-\w]{25,}');
     var match = regExp.firstMatch(url);
 
     if (match != null) {
       String fileId = match.group(0)!;
-      // استخدام رابط التحميل المباشر
       return 'https://drive.google.com/uc?export=download&id=$fileId';
     }
 
