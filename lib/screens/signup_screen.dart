@@ -37,7 +37,6 @@ class _SignUpScreenState extends State<SignUpScreen>
         .animate(CurvedAnimation(parent: _animController, curve: Curves.easeOut));
     _animController.forward();
   }
-
   @override
   void dispose() {
     _animController.dispose();
@@ -46,10 +45,10 @@ class _SignUpScreenState extends State<SignUpScreen>
     _confirm_controllerDispose();
     super.dispose();
   }
-
   void _confirm_controllerDispose() {
     _confirmController.dispose();
   }
+
 
   Future<void> _handleSignUp() async {
     if (!(_formKey.currentState?.validate() ?? false)) return;
@@ -67,7 +66,6 @@ class _SignUpScreenState extends State<SignUpScreen>
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Account created successfully ✅')),
         );
-        // نرجع للـ LoginScreen (WidgetTree سيتابع حالة الـ auth)
         Navigator.of(context).pop();
       }
     } on FirebaseAuthException catch (e) {
@@ -88,7 +86,6 @@ class _SignUpScreenState extends State<SignUpScreen>
       if (mounted) setState(() => _isLoading = false);
     }
   }
-
 
   String? _validatePassword(String? v) {
     if (v == null || v.isEmpty) return 'Enter a password';

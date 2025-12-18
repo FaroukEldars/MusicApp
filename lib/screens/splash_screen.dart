@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musicapp/screens/update_check_screen.dart';
 import 'dart:async';
-import 'login_screen.dart';
 import '../painters/particle_painter.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,7 +15,6 @@ class _SplashScreenState extends State<SplashScreen>
   late AnimationController _mainController;
   late AnimationController _glowController;
   late AnimationController _particleController;
-
   late Animation<double> _iconScale;
   late Animation<double> _iconRotation;
   late Animation<double> _textFade;

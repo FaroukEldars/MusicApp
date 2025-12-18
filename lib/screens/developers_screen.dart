@@ -64,6 +64,7 @@ class _DevelopersScreenState extends State<DevelopersScreen>
     },
   ];
 
+  // animation
   @override
   void initState() {
     super.initState();
@@ -72,7 +73,6 @@ class _DevelopersScreenState extends State<DevelopersScreen>
 
     _initAnimations();
   }
-
   void _initAnimations() {
     _animationController = AnimationController(
       vsync: this,
@@ -85,12 +85,12 @@ class _DevelopersScreenState extends State<DevelopersScreen>
 
     _animationController.forward();
   }
-
   @override
   void dispose() {
     _animationController.dispose();
     super.dispose();
   }
+  //
 
   @override
   Widget build(BuildContext context) {

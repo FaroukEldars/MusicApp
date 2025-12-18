@@ -93,7 +93,6 @@ class _HomeScreenState extends State<HomeScreen>
     }
   }
 
-
   Future<void> _seekForward() async {
     final d = _player.duration ?? Duration.zero;
     final p = _player.position + const Duration(seconds: 10);
